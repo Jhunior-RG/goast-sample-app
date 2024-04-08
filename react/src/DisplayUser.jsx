@@ -5,9 +5,9 @@ function DisplayUser() {
 
   return (
     <>
-      <div>Firstname: {username.first}</div>
-      <div>Lastname: {username.last}</div>
-      <button onClick={() => setUsername(null)}>Clear Name</button>
+      <div>Firstname: {username && username.first ? username.first : "No user selected"}</div>
+      <div>Lastname: {username && username.last ? username.last : "No user selected"}</div>
+      <button onClick={() => setUsername({first: '', last: ''})}>Clear Name</button>
     </>
   );
 }
